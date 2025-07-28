@@ -16,10 +16,13 @@ cp .env.example .env
 pnpm run compose:up
 pnpm run start:dev
 
+http://localhost:3000
+
 cd ../frontend
 pnpm install
 pnpm dev
 
+http://localhost:5173/
 ```
 
 # 🌟 Star Wars API (SWAPI) Backend

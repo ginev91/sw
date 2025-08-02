@@ -20,7 +20,9 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "useUnknownInCatchVariables": false,
-    "allowJs": true
+    "allowJs": true,
+     "types": ["node"],
+    "typeRoots": ["./node_modules/@types"]
   },
   "exclude": ["node_modules", "dist"]
 }

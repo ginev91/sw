@@ -70,8 +70,8 @@ cp .env.example .env
 pnpm run compose:up
 
 # Run database migrations
-pnpm run migration:generate ./migrations/runs/initial
-pnpm run migration:run
+pnpm run typeorm:migration:generate ./migrations/runs/initial
+pnpm run typeorm:migration:run # The migrations are run automatically on with starting script
 
 # Start the application
 pnpm run start:dev
@@ -476,12 +476,12 @@ pnpm run start:dev          # Start in development mode
 pnpm run start:debug        # Start with debugging
 
 # Database
-pnpm run migration:generate # Generate new migration
-pnpm run migration:run      # Run migrations
-pnpm run migration:revert   # Revert last migration
+pnpm run typeorm:migration:generate # Generate new migration
+pnpm run typeorm:migration:run      # Run migrations if needed to test something, they run with starting script
+pnpm run typeorm:migration:revert   # Revert last migration
 
 # Docker
-pnpm run compose:up         # Start PostgreSQL and Redis
+pnpm run compose:start         # Start PostgreSQL and Redis
 pnpm run compose:down       # Stop containers
 
 # Testing

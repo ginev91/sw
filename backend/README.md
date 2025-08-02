@@ -26,6 +26,6 @@ pnpm start:dev
 
 - `pnpm compose:start` — Start all containers
 - `pnpm compose:down` — Stop all containers
-- `pnpm migration:generate ./migrations/runs/initial/<Name>` — Generate DB migration
-- `pnpm migration:run` — Run pending migrations
-- `pnpm migration:revert` — Rollback last migration
+- `pnpm run typeorm:migration:generate ./migrations/runs/<Name>` — Generate DB migration
+- `pnpm run typeorm:migration:run` — Run pending migrations, start scripts run migration which are already created
+- `pnpm run typeorm:migration:revert` — Rollback last migration

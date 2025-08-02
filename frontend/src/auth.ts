@@ -6,7 +6,6 @@ export function saveAuth(accessToken: string, refreshToken?: string, user?: { [k
   if (user) {
     localStorage.setItem('user', JSON.stringify(user));
   }
-  console.log('Auth saved:', { accessToken, refreshToken, user });
 }
 
 export function loadAuth() {
@@ -22,7 +21,6 @@ export function loadAuth() {
       localStorage.removeItem('user');
     }
   }
-  console.log('Loaded auth:', { token, user });
   return { token, user };
 }
 

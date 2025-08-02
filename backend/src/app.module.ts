@@ -16,6 +16,7 @@ import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { LoggerModule } from 'nestjs-pino';
 
 
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -32,7 +33,7 @@ import { LoggerModule } from 'nestjs-pino';
     }),
     DatabaseModule, CustomCacheModule, UserModule, 
     AuthModule, PeopleModule, PlanetsModule, 
-    VehiclesModule, StarshipsModule, SwapiModule, ConfigModule],
+    VehiclesModule, StarshipsModule, SwapiModule],
   controllers: [AppController],
   providers: [
     AppService,
